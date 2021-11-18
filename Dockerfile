@@ -7,7 +7,6 @@ RUN apt-get update && apt-get install -y \
         zip \
         libfontconfig \
         zlib1g \
-        libfreetype6 \
         libxrender1 \
         libxext6 \
         libx11-6 \
