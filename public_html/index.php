@@ -27,5 +27,5 @@ if (!$pdf->send('report.pdf')) {
     // ... handle error here
 }
 
-// ... or you can get the raw pdf as a string
+// ... or you can get the raw pdf as a string .
 $content = $pdf->toString();
