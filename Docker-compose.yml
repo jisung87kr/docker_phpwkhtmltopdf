@@ -1,0 +1,13 @@
+# edit .env.example > .env
+
+version: "3.2"
+
+services:
+  php74:
+    build: './'
+    restart: always
+    container_name: php74-apache
+    ports:
+      - "${HTTP_PORT}:80"
+    volumes:
+      - ./public_html:/var/www/html
