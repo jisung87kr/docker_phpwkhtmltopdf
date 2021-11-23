@@ -30,5 +30,9 @@ RUN cd /var/www/html
 RUN wget 'https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.buster_amd64.deb' -P /var/www/html
 RUN dpkg -i 'wkhtmltox_0.12.6-1.buster_amd64.deb'
 
+RUN curl -o nanumfont.zip http://cdn.naver.com/naver/NanumFont/fontfiles/NanumFont_TTF_ALL.zip
+RUN unzip -d /usr/share/fonts/nanum nanumfont.zip
+RUN fc-cache -f -v
+
 ENV PATH $PATH:~/.composer/vendor/bin
 
